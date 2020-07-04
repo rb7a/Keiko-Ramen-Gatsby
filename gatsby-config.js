@@ -5,6 +5,20 @@ module.exports = {
     author: `@brittneypostma`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Merienda One`,
+          },
+          {
+            family: `Advent Pro`,
+            variants: [`300`, `400`, `700`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     {
