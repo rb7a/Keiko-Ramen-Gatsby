@@ -609,6 +609,22 @@ h4 {
   font-family: 'Merienda One', cursive;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.875rem;
+}
+
 a {
   text-decoration: none;
   --text-opacity: 1;
