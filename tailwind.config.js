@@ -3,13 +3,17 @@ module.exports = {
   theme: {
     //! anything here overrides tailwinds defaults //
     fontFamily: {
-      sans: "'Merienda One', cursive",
-      poppins: "'Advent Pro', sans-serif",
+      heading: "'Merienda One', cursive",
+      body: "'Advent Pro', sans-serif",
     },
     extend: {
       //! anything here extends tailwind defaults //
     },
   },
-  variants: {},
+  variants: {
+    //! add in variants that don't come in by default //
+    //! order is important //
+    backgroundColor: ["responsive", "hover", "focus", "active"]
+  },
   plugins: [],
 }
