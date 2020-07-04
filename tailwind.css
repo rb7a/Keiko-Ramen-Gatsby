@@ -1,21 +1,23 @@
+@tailwind base;
+
 @tailwind components;
 
 @tailwind utilities;
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 html {
-  font-size: 112.5%;
-} /*18px*/
+  font-size: 112.5%; /*18px*/
+}
 
 body {
   background-color: white;
   font-family: "Advent Pro", sans-serif;
   font-weight: 400;
   line-height: 1.65;
-  color: #333;
-}
-
-p {
-  margin-bottom: 1.15rem;
 }
 
 h1,
@@ -23,14 +25,11 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 2.75rem 0 1.05rem;
   font-family: "Merienda One", cursive;
-  font-weight: 400;
   line-height: 1.15;
 }
 
 h1 {
-  margin-top: 0;
   font-size: 4.209em;
 }
 
@@ -44,10 +43,6 @@ h3 {
 
 h4 {
   font-size: 1.777em;
-}
-
-h5 {
-  font-size: 1.333em;
 }
 
 small,
