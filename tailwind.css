@@ -35,9 +35,14 @@ h4 {
 }
 
 a {
+  @apply font-heading;
   @apply no-underline;
   @apply text-white;
   @apply text-lg;
+}
+
+header nav a + a {
+  margin-left: 10px;
 }
 
 @tailwind components;
