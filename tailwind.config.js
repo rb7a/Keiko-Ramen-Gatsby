@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./src/styles/main.css", "./src/**/*.js", "./src/**/*.jsx"],
   theme: {
     //! anything here overrides tailwinds defaults //
+    boxShadow: {
+      outline: '0 0 0 3px rgba(0,0,0, 0.5)'
+    },
     colors: {
       white: "#efefef",
       black: "#111111",
@@ -20,7 +23,8 @@ module.exports = {
   variants: {
     //! add in variants that don't come in by default //
     //! order is important //
-    backgroundColor: ["responsive", "hover", "focus", "active"]
+    backgroundColor: ["responsive", "hover", "focus", "active"],
+    borderWidth: ['responsive', 'hover', 'focus', 'active', 'group-hover']
   },
   plugins: [],
 }

@@ -39,9 +39,17 @@ a {
   @apply no-underline;
   @apply text-white;
   @apply text-lg;
+  @apply transition-all;
+  @apply ease-linear;
+  @apply duration-75;
 }
 
-header nav a + a {
+button:focus {
+  @apply outline-none;
+  @apply shadow-outline;
+}
+
+header nav div + div {
   margin-left: 10px;
 }
 
