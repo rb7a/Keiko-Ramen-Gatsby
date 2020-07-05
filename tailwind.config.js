@@ -18,6 +18,12 @@ module.exports = {
     },
     extend: {
       //! anything here extends tailwind defaults //
+      height: {
+        96: "24rem",
+        100: "25rem",
+        125: "32rem",
+        200: "58rem",
+      },
     },
   },
   variants: {

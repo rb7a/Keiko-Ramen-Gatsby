@@ -44,6 +44,13 @@ a {
   @apply duration-75;
 }
 
+button {
+  @apply bg-orange;
+  @apply rounded-full;
+  @apply p-3;
+  transition: all 150ms linear;
+}
+
 button:focus {
   @apply outline-none;
   @apply shadow-outline;
@@ -56,3 +63,21 @@ header nav div + div {
 @tailwind components;
 
 @tailwind utilities;
+
+.center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-150 {
+  top: 150px;
+}
+
+@variants hover {
+  .btn-hover {
+    color: #ff7800;
+    background: white;
+  }
+}
