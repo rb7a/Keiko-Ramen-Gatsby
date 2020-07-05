@@ -79,13 +79,12 @@ header nav li a {
 
 .center {
   position: absolute;
-  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.top-150 {
-  top: 150px;
+.top-200 {
+  top: 200px;
 }
 
 .text-shadow {
@@ -93,8 +92,7 @@ header nav li a {
 }
 
 .bg-clear {
-  position: relative;
-  top: 100vw;
+  top: 500px;
 }
 
 .bg-transparent {

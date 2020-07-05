@@ -8,7 +8,8 @@ module.exports = {
       none: 'none'
     },
     colors: {
-      white: "#efefef",
+      white: '#ffffff',
+      lightGray: '#fefefe',
       black: "#111111",
       red: "#A50022",
       darkRed: "#640A13",
@@ -21,10 +22,11 @@ module.exports = {
     extend: {
       //! anything here extends tailwind defaults //
       height: {
-        96: "24rem",
-        100: "25rem",
-        125: "32rem",
         200: "58rem",
+        500: "500px",
+      },
+      screens: {
+        lg: '930px'
       },
     },
   },

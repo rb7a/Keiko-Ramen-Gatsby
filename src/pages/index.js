@@ -8,12 +8,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <img src={bg} alt="bowl of ramen with chopsticks" className="absolute top-0 w-screen" />
-      <h1 className="center top-150 text text-white text-shadow text-4xl lg:text-6xl">Keiko Ramen</h1>
+      <img src={bg} alt="bowl of ramen with chopsticks" className="absolute w-screen h-500 object-cover lg:object-contain" />
+      <h1 className="relative w-full text-center top-200 text-white text-shadow text-5xl sm:text-6xl">Keiko Ramen</h1>
     </div>
-    <div className="bg-red bg-clear py-24 px-32">
+    <div className="relative bg-clear bg-red p-5">
       <Menu />
     </div>
+
   </Layout>
 )
 
