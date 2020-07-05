@@ -64,6 +64,15 @@ header nav div + div {
 
 @tailwind utilities;
 
+@variants hover {
+  .btn-hover {
+    color: #ff7800;
+    background: white;
+  }
+}
+
+/*! CUSTOM CSS */
+
 .center {
   position: absolute;
   top: 0;
@@ -75,9 +84,56 @@ header nav div + div {
   top: 150px;
 }
 
-@variants hover {
-  .btn-hover {
-    color: #ff7800;
-    background: white;
-  }
+.text-shadow {
+  text-shadow: 0 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+/*! SCROLLBARS */
+* {
+  scrollbar-color: #a50022 black;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 13px;
+  background: #a50022;
+  border-left: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #640a13;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: black;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #a50022 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #640a13 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #a50022 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #640a13 transparent transparent transparent;
 }
