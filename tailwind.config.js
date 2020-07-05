@@ -3,7 +3,9 @@ module.exports = {
   theme: {
     //! anything here overrides tailwinds defaults //
     boxShadow: {
-      outline: '0 0 0 3px rgba(0,0,0, 0.5)'
+      outline: '0 0 0 3px rgba(0,0,0, 0.5)',
+      inset: 'inset 0px 5px 10px rgba(0, 0, 0, 0.25)',
+      none: 'none'
     },
     colors: {
       white: "#efefef",

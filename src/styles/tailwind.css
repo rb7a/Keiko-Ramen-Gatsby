@@ -56,7 +56,11 @@ button:focus {
   @apply shadow-outline;
 }
 
-header nav div + div {
+header nav li {
+  margin-bottom: 10px;
+}
+
+header nav li a {
   margin-left: 10px;
 }
 
@@ -86,6 +90,15 @@ header nav div + div {
 
 .text-shadow {
   text-shadow: 0 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.bg-clear {
+  position: relative;
+  top: 100vw;
+}
+
+.bg-transparent {
+  background: transparent;
 }
 
 /*! SCROLLBARS */
