@@ -35,9 +35,22 @@ h4 {
 }
 
 a {
+  @apply font-heading;
   @apply no-underline;
   @apply text-white;
   @apply text-lg;
+  @apply transition-all;
+  @apply ease-linear;
+  @apply duration-75;
+}
+
+button:focus {
+  @apply outline-none;
+  @apply shadow-outline;
+}
+
+header nav div + div {
+  margin-left: 10px;
 }
 
 @tailwind components;
