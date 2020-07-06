@@ -2,11 +2,6 @@ module.exports = {
   purge: ["./src/styles/main.css", "./src/**/*.js", "./src/**/*.jsx"],
   theme: {
     //! anything here overrides tailwinds defaults //
-    boxShadow: {
-      outline: '0 0 0 3px rgba(0,0,0, 0.5)',
-      inset: 'inset 0px 5px 10px rgba(0, 0, 0, 0.25)',
-      none: 'none'
-    },
     colors: {
       white: '#ffffff',
       lightGray: '#fefefe',
@@ -21,6 +16,11 @@ module.exports = {
     },
     extend: {
       //! anything here extends tailwind defaults //
+      boxShadow: {
+        outline: '0 0 0 3px rgba(0,0,0, 0.5)',
+        inset: 'inset 0px 5px 10px rgba(0, 0, 0, 0.25)',
+        none: 'none'
+      },
       height: {
         200: "58rem",
         500: "500px",

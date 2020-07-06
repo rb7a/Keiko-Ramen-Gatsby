@@ -45,9 +45,11 @@ a {
 }
 
 button {
+  @apply uppercase;
   @apply bg-orange;
   @apply rounded-full;
   @apply p-3;
+  @apply text-white;
   transition: all 150ms linear;
 }
 
