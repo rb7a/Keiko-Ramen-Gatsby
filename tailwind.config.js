@@ -34,7 +34,8 @@ module.exports = {
     //! add in variants that don't come in by default //
     //! order is important //
     backgroundColor: ["responsive", "hover", "focus", "active"],
-    borderWidth: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+    borderWidth: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover']
   },
   plugins: [],
 }
