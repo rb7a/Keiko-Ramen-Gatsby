@@ -49,7 +49,7 @@ button {
   @apply bg-orange;
   @apply rounded-full;
   @apply px-3;
-  @apply py-5;
+  @apply py-4;
   @apply font-heading;
   @apply text-white;
   transition: all 150ms linear;
