@@ -22,6 +22,8 @@ module.exports = {
         none: 'none'
       },
       height: {
+        100: "100px",
+        125: "125px",
         200: "58rem",
         500: "500px",
       },

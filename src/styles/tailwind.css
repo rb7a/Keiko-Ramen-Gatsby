@@ -1,5 +1,9 @@
 @tailwind base;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #___gatsby,
@@ -80,6 +84,10 @@ header nav li a {
 }
 
 /*! CUSTOM CSS */
+.email {
+  top: 35%;
+  right: 75px;
+}
 
 .center {
   position: absolute;
@@ -87,8 +95,20 @@ header nav li a {
   transform: translate(-50%, -50%);
 }
 
+.top-125 {
+  top: 125px;
+}
+
 .top-200 {
   top: 200px;
+}
+
+.mb-clear {
+  margin-top: 175px;
+}
+
+.mb-600 {
+  margin-bottom: 600px;
 }
 
 .text-shadow {
@@ -96,11 +116,21 @@ header nav li a {
 }
 
 .bg-clear {
-  top: 500px;
+  top: 600px;
 }
 
 .bg-transparent {
   background: transparent;
+}
+path {
+  transition: fill 75ms ease;
+}
+.icon:hover > path {
+  fill: #ffffff;
+}
+
+.icon:hover > circle {
+  fill: #ff7800;
 }
 
 /*! SCROLLBARS */
