@@ -66,6 +66,9 @@ button:focus {
 
 input {
   height: 34px;
+  color: black;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header nav li {

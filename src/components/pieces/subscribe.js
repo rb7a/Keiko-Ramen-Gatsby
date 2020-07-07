@@ -11,7 +11,7 @@ const Subscribe = () => {
           <div className="flex">
             <div className="grid">
               <label htmlFor="email" className="text-white text-xl">Enter your email<br />
-                <input type="email" id="email" name="email" /></label>
+                <input type="email" id="email" name="email" className="p-2" /></label>
             </div>
             <div className="bg-orange p-2 self-end">
               <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
