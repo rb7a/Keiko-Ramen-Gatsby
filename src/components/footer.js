@@ -4,7 +4,7 @@ import Socials from './pieces/socials'
 
 const Footer = () => {
   return (
-    <div className="bg-red py-5">
+    <div className="bg-red py-5 mt-24">
       <Subscribe />
       <Socials />
     </div>
