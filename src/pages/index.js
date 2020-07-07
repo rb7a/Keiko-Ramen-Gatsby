@@ -9,11 +9,12 @@ import bg from '../images/bg.jpg'
 const IndexPage = () => (
   <Layout>
     <SEO title="Keiko Ramen" />
-    <div className='relative top-125'>
-      <img src={bg} alt="bowl of ramen with chopsticks" className="absolute w-screen h-500 object-cover object-top lg:object-contain " />
-      <h1 className="relative w-full text-center top-200 text-white text-shadow text-5xl sm:text-6xl">Keiko Ramen</h1>
+    <div className="relative top-125 flex justify-center">
+      <img src={bg} alt="bowl of ramen with chopsticks" className="object-cover object-top lg:object-contain " />
+      <h1 className="absolute w-full text-center top-25 text-white text-shadow text-4xl sm:text-6xl">Keiko Ramen</h1>
     </div>
-    <div className="relative bg-clear bg-red">
+
+    <div className="relative top-125 mb-24 bg-red">
       <Menu />
       <div className="bg-white"><Carousel /></div>
       <Location />

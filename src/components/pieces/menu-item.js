@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import cart from '../../images/cart.png'
 
-const itemWrapper = `bg-white shadow-inset sm:hover:shadow-none flex justify-between items-center pl-5 gap-5 mx-auto w-full transition-transform ease-linear duration-75 transform sm:hover:scale-105 sm:hover:bg-orange sm:hover:text-white xl:w-1/2`
-const cartLink = `bg-orange self-stretch flex flex-col items-center justify-center p-5`
+const itemWrapper = `rounded-sm bg-white shadow-inset sm:hover:shadow-none flex justify-between items-center pl-5 gap-5 mx-auto w-full transition-transform ease-linear duration-75 transform sm:hover:scale-105 sm:hover:bg-orange sm:hover:text-white xl:w-1/2`
+const cartLink = `rounded-sm bg-orange self-stretch flex flex-col items-center justify-center p-5`
 
 const MenuItem = () => {
   return (

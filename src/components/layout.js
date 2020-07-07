@@ -13,12 +13,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="mb-600">
-        <main>{children}</main>
-      </div>
-      <div className="absolute w-full bg-red">
-        <Footer />
-      </div>
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }
