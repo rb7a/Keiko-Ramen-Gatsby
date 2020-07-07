@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import Menu from '../components/sections/menu'
 import Carousel from '../components/sections/carousel'
 import Location from '../components/sections/location'
-import Footer from '../components/footer'
 import bg from '../images/bg.jpg'
 
 const IndexPage = () => (
