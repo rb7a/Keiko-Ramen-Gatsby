@@ -1,5 +1,9 @@
 @tailwind base;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #___gatsby,
@@ -44,15 +48,151 @@ a {
   @apply duration-75;
 }
 
+button {
+  @apply uppercase;
+  @apply bg-orange;
+  @apply rounded-full;
+  @apply px-3;
+  @apply py-4;
+  @apply font-heading;
+  @apply text-white;
+  transition: all 150ms linear;
+}
+
 button:focus {
   @apply outline-none;
   @apply shadow-outline;
 }
 
-header nav div + div {
+header nav li {
+  margin-bottom: 10px;
+}
+
+header nav li a {
   margin-left: 10px;
 }
 
 @tailwind components;
 
 @tailwind utilities;
+
+@variants hover {
+  .btn-hover {
+    color: #ff7800;
+    background: white;
+  }
+}
+
+/*! CUSTOM CSS */
+.email {
+  top: 35%;
+  right: 75px;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-125 {
+  top: 125px;
+}
+
+.top-200 {
+  top: 200px;
+}
+
+.mb-clear {
+  margin-top: 175px;
+}
+
+.mb-600 {
+  margin-bottom: 600px;
+}
+
+.text-shadow {
+  text-shadow: 0 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.bg-clear {
+  top: 600px;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+path {
+  transition: fill 75ms ease;
+}
+.icon:hover > path {
+  fill: #ffffff;
+}
+
+.icon:hover > circle {
+  fill: #ff7800;
+}
+
+/*! SCROLLBARS */
+* {
+  scrollbar-color: #a50022 black;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 13px;
+  background: #a50022;
+  border-left: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #640a13;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: black;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #a50022 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #640a13 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #a50022 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #640a13 transparent transparent transparent;
+}
+
+/*! Number input remove arrows */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

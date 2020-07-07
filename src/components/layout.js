@@ -6,15 +6,18 @@
  */
 
 import React from "react"
-
 import Header from "./header"
+import Footer from './footer'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div>
+      <div className="mb-600">
         <main>{children}</main>
+      </div>
+      <div className="absolute w-full bg-red">
+        <Footer />
       </div>
     </>
   )
