@@ -23,6 +23,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Keiko Ramen" />
+
       <div className="relative top-125 flex justify-center">
         <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="object-cover object-top lg:object-contain" style={{ width: '960px' }} />
         <h1 className="absolute w-full text-center top-25 text-white text-shadow text-4xl sm:text-6xl">Keiko Ramen</h1>
@@ -35,12 +36,12 @@ const IndexPage = () => {
           </svg>
         </div>
         <Menu />
-        <div className="bg-white relative"><Carousel />
-
+        <div className="bg-white relative">
+          <Carousel />
         </div>
-
         <Location />
       </div>
+
     </Layout >
   )
 }

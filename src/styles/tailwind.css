@@ -218,6 +218,7 @@ input[type="number"] {
   display: block;
   width: calc(195% + 1.3px);
   height: 54px;
+  transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1594131229 .shape-fill {
