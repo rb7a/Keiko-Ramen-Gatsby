@@ -64,6 +64,10 @@ button:focus {
   @apply shadow-outline;
 }
 
+input {
+  height: 34px;
+}
+
 header nav li {
   margin-bottom: 10px;
 }
