@@ -7,7 +7,7 @@ import MenuCard from '../components/pieces/menu-card'
 const Menu = () => {
   return (
     <Layout>
-      <SEO title="menu" />
+      <SEO title="Menu" />
       <div className="clear-footer pb-24">
         <div className="relative bg-clear-top">
           <Carousel />
