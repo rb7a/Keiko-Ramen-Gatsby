@@ -27,6 +27,9 @@ module.exports = {
         200: "58rem",
         500: "500px",
       },
+      opacity: {
+        90: '0.9'
+      },
       screens: {
         lg: '930px'
       },

@@ -8,9 +8,9 @@ const cartLink = `rounded-sm bg-orange self-stretch flex flex-col items-center j
 const MenuItem = () => {
   return (
     <div className={itemWrapper}>
-      <div className="w-full flex items-center gap-5">
+      <div className="w-full flex items-center">
         <h2 className="text-xl">Spicy Beef Ramen</h2>
-        <p className="max-w-lg mr-4 py-5 text-sm">
+        <p className="max-w-lg mr-4 py-5 text-sm ml-5">
           Bean sprouts bamboo slices Tokyo kamaboko Kumamoto toasted sesame seeds Nagoya leek bean sprouts scallions leek minced garlic curry bean sprouts ginger.
         </p>
 
