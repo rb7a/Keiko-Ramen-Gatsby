@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 import Carousel from '../components/sections/carousel'
 import MenuCard from '../components/pieces/menu-card'
 
-const Menu = () => {
+const MenuPage = () => {
   return (
     <Layout>
       <SEO title="Menu" />
@@ -27,4 +27,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default MenuPage
