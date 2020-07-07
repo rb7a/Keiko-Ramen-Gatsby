@@ -130,7 +130,7 @@ header nav li a {
   background: transparent;
 }
 path {
-  transition: fill 75ms ease;
+  transition: fill 150ms ease;
 }
 .icon:hover > path {
   fill: #ffffff;

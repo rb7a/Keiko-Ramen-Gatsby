@@ -10,16 +10,14 @@ const Location = () => {
           <h3>Phone</h3>
           <p className="font-heading text-black">(123)555-1234</p>
           <h3>Location</h3>
-          <p className="font-heading text-black">
-            40 Washington Square S
-            <br />
-            New York, NY 10012
-            </p>
+          <p className="font-heading text-black grid">
+            <span>40 Washington Square S</span>
+            <span>New York, NY 10012</span>
+          </p>
           <h3>Hours</h3>
-          <p className="font-heading text-black">
-            Mon-Fri 11am - midnight
-            <br />
-            Sat & Sun 11am - 2am
+          <p className="font-heading text-black grid">
+            <span>Mon-Fri 11am - midnight</span>
+            <span>Sat & Sun 11am - 2am</span>
           </p>
         </div>
       </div>
