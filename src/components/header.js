@@ -8,7 +8,7 @@ const stickyHeader = `fixed top-0 w-full h-125 z-10 bg-darkRed bg-opacity-90 sha
 const headerWrapper = `relative z-10 flex items-center justify-between px-10 py-4`
 const mobileNavBtn = `bg-transparent z-10 mt-2 relative text-white cursor-pointer text-xl leading-none rounded bg-transparent  block lg:hidden outline-none focus:outline-none focus:shadow-none`
 const hamburgerMenu = `grid h-1 w-10 relative mb-2 bg-white rounded z-10`
-const menuStyles = `rounded-md border-solid border-black border-4 lg:border-none bg-red relative top-125 lg:top-0 mr-0 lg:mr-12 grid lg:flex items-center lg:bg-opacity-0 p-2 lg:p-0`
+const menuStyles = `menu rounded-md border-solid border-black border-4 lg:border-none relative top-125 lg:top-0 mr-0 lg:mr-12 grid lg:flex items-center lg:bg-opacity-0 p-2 lg:p-0`
 const linksStyles = `border-b-0 border-solid border-orange hover:border-b-4 `
 const badgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-1`
 

@@ -13,7 +13,7 @@ const IndexPage = () => {
   query {
     bgImg: file(relativePath: { eq: "bg.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 960) {
+        fluid(maxWidth: 1452) {
           ...GatsbyImageSharpFluid
         }
       }
