@@ -13,8 +13,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
-      <Footer />
+      <main className="h-full relative">
+        <div>{children}</div>
+        <div className='relative top-125'><Footer /></div>
+      </main>
+
     </>
   )
 }

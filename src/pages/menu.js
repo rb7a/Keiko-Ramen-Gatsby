@@ -8,7 +8,7 @@ const MenuPage = () => {
   return (
     <Layout>
       <SEO title="Menu" />
-      <div className="clear-footer pb-24">
+      <div className="pb-24">
         <div className="relative bg-clear-top">
           <Carousel />
           <div className="grid gap-10 gtc justify-center xl:mx-48">

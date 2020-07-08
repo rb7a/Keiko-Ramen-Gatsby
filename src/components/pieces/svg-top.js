@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SVG = () => {
+const SVGTop = () => {
   return (
     <div className="custom-shape-divider-top-1594131229">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -10,4 +10,4 @@ const SVG = () => {
   )
 }
 
-export default SVG
+export default SVGTop
