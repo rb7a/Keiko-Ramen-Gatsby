@@ -27,7 +27,7 @@ const IndexPage = () => {
 
       <div className="relative top-125 flex justify-center pb-32">
         <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="object-cover object-top lg:object-contain" style={{ width: '960px' }} />
-        <h1 className="absolute w-full text-center top-25 text-white text-shadow text-4xl sm:text-6xl">Keiko Ramen</h1>
+        <h1 className="absolute w-full text-center bottom-0 text-5xl sm:text-6xl">Keiko Ramen</h1>
       </div>
 
       <div className="mt-24 relative top-125 py-12">
