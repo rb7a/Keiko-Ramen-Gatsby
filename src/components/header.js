@@ -62,7 +62,7 @@ const Header = ({ sticky }) => {
                 <Link to='/location' className={linksStyles}>LOCATION</Link>
               </li>
               <li>
-                <Link to='/order'>
+                <Link to='/order-now'>
                   <button className="ml-1 mr-2 hover:btn-hover">ORDER NOW</button>
                 </Link>
               </li>

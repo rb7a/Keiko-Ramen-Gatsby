@@ -115,9 +115,6 @@ header nav li a {
   transform: translate(-50%, -50%);
 }
 
-.clear-footer {
-  margin-bottom: 4rem;
-}
 .email {
   top: 35%;
   right: 75px;

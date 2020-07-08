@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Location from '../components/sections/location'
+import SVGBottom from '../components/pieces/svg-bottom'
 
 const LocationPage = () => {
   const data = useStaticQuery(graphql`
@@ -21,8 +22,9 @@ const LocationPage = () => {
     <Layout>
       <SEO title="Location" />
       <div className="relative bg-clear-top">
-        <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="object-cover object-top lg:object-contain max-h-screen" />
+        <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="object-cover lg:max-h-screen" />
         <Location />
+        <SVGBottom />
       </div>
     </Layout>
   )

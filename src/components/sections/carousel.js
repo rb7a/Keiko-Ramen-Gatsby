@@ -5,7 +5,7 @@ import beef from '../../images/full-images/beef-ramen.jpg'
 
 const Carousel = () => {
   return (
-    <div className="py-24 xl:mx-48">
+    <div className="py-12 xl:mx-48">
       <div className="rounded-sm p-10 flex justify-between gap-5 shadow-xl">
         <div className="w-full xl:w-1/2">
           <h2>Spicy Beef<br />Ramen</h2>
@@ -18,7 +18,7 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <div className="hidden xl:flex w-1/2 justify-center">
+        <div className="hidden lg:flex xl:w-1/2 justify-center">
           <img src={beef} alt="Spicy Beef Ramen" className="h-full object-cover object-center" />
         </div>
       </div>
