@@ -26,11 +26,12 @@ const IndexPage = () => {
       <SEO title="Keiko Ramen" />
       <section className="relative top-125 flex justify-center">
         <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="bg" />
+        <div className="w-full absolute center bottom-0 text-center text-white">
+          <h1 className="text-5xl sm:text-80 text-shadow">Keiko Ramen</h1>
+          <p className="text-5xl sm:text-6xl text-shadow">Noodles & Stuff</p>
+        </div>
       </section>
-      <div className="w-full absolute center bottom-0 text-center text-white">
-        <h1 className="text-5xl sm:text-80 text-shadow">Keiko Ramen</h1>
-        <p className="text-5xl sm:text-6xl text-shadow">Noodles & Stuff</p>
-      </div>
+
       <div className="mt-24 relative pt-12">
         <h2 className="text-center">Menu</h2>
         <div className="relative">
