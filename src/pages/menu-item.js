@@ -7,7 +7,7 @@ const MenuItemPage = () => {
   return (
     <Layout>
       <SEO title="menu-item" />
-      <div className="relative bg-clear-top">
+      <div className="relative bg-clear-top mb-32">
         <Carousel />
       </div>
     </Layout>

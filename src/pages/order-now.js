@@ -9,6 +9,7 @@ const OrderNowPage = () => {
     <Layout>
       <SEO title='Order Now' />
       <div className="relative bg-clear-top">
+        <h1 className='text-white text-center bg-red'>Order Now</h1>
         <Menu />
         <SVGBottom />
       </div>

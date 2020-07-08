@@ -21,6 +21,9 @@ module.exports = {
         inset: 'inset 0px 5px 10px rgba(0, 0, 0, 0.25)',
         none: 'none'
       },
+      fontSize: {
+        80: '8rem'
+      },
       height: {
         100: "100px",
         125: "125px",

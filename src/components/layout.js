@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <Header />
       <main className="h-full relative">
         <div>{children}</div>
-        <div className='relative top-125'><Footer /></div>
+        <div className='relative'><Footer /></div>
       </main>
 
     </>

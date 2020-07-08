@@ -8,9 +8,9 @@ const CartPage = () => {
     <Layout>
       <SEO title="Cart" />
       <div className="pb-24 p-5">
-        <div className="relative bg-clear-top">
+        <div className="relative bg-clear-top mb-32">
           <div>
-            <h2 className="text-center md:text-left">Your Order</h2>
+            <h2 className="text-center md:text-left lg:ml-5">Your Order</h2>
           </div>
           <div className='grid gap-5 lg:flex lg:ml-5'>
 

@@ -93,6 +93,21 @@ header nav li a {
 }
 
 /*! CUSTOM CSS */
+.bezier {
+  transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+    -webkit-transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.bezier:hover {
+  transform: scale(1.1);
+}
+
+.bg {
+  filter: brightness(60%);
+  width: 100vw;
+  height: calc(100vh - 125px);
+}
+
 .bg-clear-top {
   top: 125px;
 }
@@ -111,6 +126,7 @@ header nav li a {
 
 .center {
   position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -158,7 +174,7 @@ path {
 }
 
 .text-shadow {
-  text-shadow: 0 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .top-25 {
