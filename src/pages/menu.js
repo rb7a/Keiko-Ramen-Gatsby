@@ -8,11 +8,11 @@ const MenuPage = () => {
   return (
     <Layout>
       <SEO title="Menu" />
-      <div className="mb-64">
+      <div className="mb-48">
         <div className="relative bg-clear-top">
           <h1 className="text-center">Menu</h1>
           <Carousel />
-          <div className="grid gap-10 gtc justify-center xl:mx-48">
+          <div className="grid gap-10 gtc justify-center mt-8 xl:mx-48">
             <MenuCard />
             <MenuCard />
             <MenuCard />

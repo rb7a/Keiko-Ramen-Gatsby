@@ -105,7 +105,7 @@ header nav li a {
 .bg {
   filter: brightness(60%);
   width: 100vw;
-  height: calc(100vh - 125px);
+  height: 100vh; /*  - 125px */
 }
 
 .bg-clear-top {
@@ -171,6 +171,15 @@ header nav li a {
 
 path {
   transition: fill 150ms ease;
+}
+
+.svg-flip {
+  position: relative;
+  transform: scaleY(-1);
+}
+
+.svg-top {
+  top: -72px;
 }
 
 .text-shadow {

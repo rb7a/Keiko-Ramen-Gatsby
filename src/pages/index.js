@@ -27,15 +27,17 @@ const IndexPage = () => {
       <section className="relative top-125 flex justify-center">
         <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="bg" />
         <div className="w-full absolute center bottom-0 text-center text-white">
-          <h1 className="text-5xl sm:text-80 text-shadow">Keiko Ramen</h1>
-          <p className="text-5xl sm:text-6xl text-shadow">Noodles & Stuff</p>
+          <h1 className="text-6xl lg:text-80 text-shadow">Keiko Ramen</h1>
+          <p className="text-5xl lg:text-6xl text-shadow">Noodles & Stuff</p>
         </div>
       </section>
 
-      <div className="mt-24 relative pt-12">
-        <h2 className="text-center">Menu</h2>
+      <div className="mt-24 relative">
+        <h2 className="text-center text-white bg-red">Menu</h2>
         <div className="relative">
-          <SVGTop />
+          <div className='svg-flip svg-top'>
+            <SVGTop color="#A50022" />
+          </div>
           <Menu />
           <SVGBottom />
         </div>
@@ -43,9 +45,12 @@ const IndexPage = () => {
         <div className="bg-white relative">
           <Carousel />
         </div>
-        <h2 className="text-center">Location</h2>
-        <div className="relative">
-          <SVGTop />
+
+        <div className="relative pt-32">
+          <div className='svg-flip'>
+            <SVGTop color="#A50022" />
+          </div>
+          <h2 className="text-center text-white bg-red">Location</h2>
           <Location />
           <SVGBottom />
         </div>
