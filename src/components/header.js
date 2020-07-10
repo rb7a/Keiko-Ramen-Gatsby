@@ -4,9 +4,10 @@ import logo from "../images/logo.png"
 import cart from "../images/cart.png"
 
 const headerStyles = `fixed top-0 w-full h-125 z-20 bg-red`
-const stickyHeader = `fixed top-0 w-full h-125 z-20 bg-darkRed bg-opacity-90 shadow-lg`
+const stickyHeader = `fixed top-0 w-full h-16 z-20 bg-darkRed bg-opacity-90 shadow-lg`
 const headerWrapper = `relative z-10 flex items-center justify-between px-10 py-4`
 const mobileNavBtn = `bg-transparent z-10 mt-2 relative text-white cursor-pointer text-xl leading-none rounded bg-transparent  block lg:hidden outline-none focus:outline-none focus:shadow-none`
+const navBtnScroll = `py-0 bg-transparent z-10 mt-2 relative text-white cursor-pointer text-xl leading-none rounded bg-transparent  block lg:hidden outline-none focus:outline-none focus:shadow-none`
 const hamburgerMenu = `grid h-1 w-10 relative mb-2 bg-white rounded z-10`
 const menuStyles = `menu rounded-md border-solid border-black border-4 lg:border-none relative top-125 lg:top-0 mr-0 lg:mr-12 grid lg:flex items-center lg:bg-opacity-0 p-2 lg:p-0`
 const linksStyles = `border-b-0 border-solid border-orange hover:border-b-4 `
@@ -32,11 +33,11 @@ const Header = ({ sticky }) => {
     <header className={isTop ? headerStyles : stickyHeader}>
       <div className={headerWrapper}>
         <Link to='/'>
-          <img src={logo} alt="Keiko Ramen logo" />
+          <img src={logo} alt="Keiko Ramen logo" className={isTop ? 'flex' : 'hidden'} />
         </Link>
         <div className="w-full flex justify-end items-center">
           <button
-            className={mobileNavBtn}
+            className={isTop ? mobileNavBtn : navBtnScroll}
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
             <div>

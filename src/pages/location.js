@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Location from '../components/sections/location'
-import SVGBottom from '../components/pieces/svg-bottom'
 
 const LocationPage = () => {
   const data = useStaticQuery(graphql`

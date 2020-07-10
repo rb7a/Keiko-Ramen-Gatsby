@@ -212,28 +212,7 @@ input[type="number"] {
 }
 
 /*! Waves CSS */
-
-.custom-shape-divider-top-1594131228 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1594131228 svg {
-  position: relative;
-  display: block;
-  width: calc(195% + 1.3px);
-  height: 54px;
-}
-
-.custom-shape-divider-top-1594131228 .shape-fill {
-  fill: #ffffff;
-}
-
-.custom-shape-divider-bottom-1594131361 {
+.wave-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -243,7 +222,7 @@ input[type="number"] {
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1594131361 svg {
+.wave-bottom svg {
   position: relative;
   display: block;
   width: calc(195% + 1.3px);
@@ -251,11 +230,7 @@ input[type="number"] {
   transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1594131361 .shape-fill {
-  fill: #ffffff;
-}
-
-.custom-shape-divider-top-1594131229 {
+.wave-top {
   position: absolute;
   z-index: 10;
   top: 0;
@@ -265,36 +240,10 @@ input[type="number"] {
   line-height: 0;
 }
 
-.custom-shape-divider-top-1594131229 svg {
+.wave-top svg {
   position: relative;
   display: block;
   width: calc(195% + 1.3px);
   height: 54px;
   transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1594131229 .shape-fill {
-  fill: #ffffff;
-}
-
-.custom-shape-divider-top-1594131220 {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1594131220 svg {
-  position: relative;
-  display: block;
-  width: calc(195% + 1.3px);
-  height: 54px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1594131220 .shape-fill {
-  fill: #ffffff;
 }
