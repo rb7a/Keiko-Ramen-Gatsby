@@ -1,12 +1,11 @@
 import React from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Carousel from '../components/sections/carousel'
 import MenuCard from '../components/pieces/menu-card'
 
 const MenuPage = () => {
   return (
-    <Layout>
+    <div>
       <SEO title="Menu | Keiko Ramen" />
       <div className="mb-48">
         <div className="relative bg-clear-top">
@@ -24,7 +23,7 @@ const MenuPage = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 

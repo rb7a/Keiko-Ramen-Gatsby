@@ -1,16 +1,15 @@
 import React from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Carousel from '../components/sections/carousel'
 
 const MenuItemPage = () => {
   return (
-    <Layout>
+    <div>
       <SEO title="Menu Item | Keiko Ramen" />
       <div className="relative bg-clear-top mb-32">
         <Carousel />
       </div>
-    </Layout>
+    </div>
   )
 }
 
