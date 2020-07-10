@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -26,6 +26,10 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
+  const metaImage =
+    typeof window !== `undefined` &&
+    `${window.location.origin}${withPrefix(`/images/logo.png`)}`
 
   return (
     <Helmet
@@ -45,7 +49,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://raw.githubusercontent.com/brittneypostma/final-project-keiko/master/src/images/logo.png?token=AK6DRQQMDWFKMGRUXYYED3K7A7AUY`,
+          content: metaImage,
+        },
+        {
+          property: `og:image:width`,
+          content: `1200`,
         },
         {
           property: `og:url`,
@@ -69,7 +77,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: `https://raw.githubusercontent.com/brittneypostma/final-project-keiko/master/src/images/logo.png?token=AK6DRQQMDWFKMGRUXYYED3K7A7AUY`,
+          content: metaImage,
         },
         {
           property: `twitter:image:alt`,
