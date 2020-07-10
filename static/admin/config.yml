@@ -4,3 +4,13 @@ backend:
 
 media_folder: src/images
 public_folder: /static
+
+collections:
+  - name: "menu-items"
+    label: "Menu Items"
+    folder: "src/providers"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
