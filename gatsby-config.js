@@ -3,7 +3,7 @@ module.exports = {
     title: `Keiko Ramen`,
     description: `A Japanese restaurant where you can get delicious ramen!`,
     author: `@brittneypostma`,
-    image: `https://keiko-ramen.netlify.app/5ef6d9a3-7003-46bb-91ff-0f3a5ace0ff4`,
+    image: `https://ibb.co/FxK1mMj`,
     siteUrl: `https://keiko-ramen.netlify.app/`
 
   },
