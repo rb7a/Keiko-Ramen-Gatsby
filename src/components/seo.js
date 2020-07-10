@@ -44,6 +44,14 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:image`,
+          content: `https://raw.githubusercontent.com/brittneypostma/final-project-keiko/master/src/images/logo.png?token=AK6DRQQMDWFKMGRUXYYED3K7A7AUY`,
+        },
+        {
+          property: `og:url`,
+          content: `https://keiko-ramen.netlify.app/`
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
@@ -58,6 +66,14 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
+        },
+        {
+          property: `twitter:image`,
+          content: `https://raw.githubusercontent.com/brittneypostma/final-project-keiko/master/src/images/logo.png?token=AK6DRQQMDWFKMGRUXYYED3K7A7AUY`,
+        },
+        {
+          property: `twitter:image:alt`,
+          content: `Keiko Ramen Noodles & Stuff`,
         },
         {
           name: `twitter:title`,
