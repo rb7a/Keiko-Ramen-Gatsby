@@ -3,7 +3,7 @@ module.exports = {
     title: `Keiko Ramen`,
     description: `A Japanese restaurant where you can get delicious ramen!`,
     author: `@brittneypostma`,
-    image: `https://images-ext-2.discordapp.net/external/VEWuo4inVd0RpmrZdGTfyCVc1IPAW1cx5SJwpPecjyE/https/repository-images.githubusercontent.com/276400069/78726c80-c292-11ea-9ebd-f2f466050a0e?width=882&height=441`,
+    image: `https://media.discordapp.net/attachments/579172807976419338/731148551878606909/android-chrome-192x192.png`,
     siteUrl: `https://keiko-ramen.netlify.app/`
 
   },

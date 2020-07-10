@@ -51,11 +51,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image:width`,
-          content: `882px`,
+          content: `192px`,
         },
         {
           property: `og:image:height`,
-          content: `441px`,
+          content: `192px`,
         },
         {
           property: `og:url`,
