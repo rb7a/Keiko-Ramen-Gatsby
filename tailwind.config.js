@@ -8,7 +8,8 @@ module.exports = {
       black: "#111111",
       red: "#A50022",
       darkRed: "#640A13",
-      orange: "#FF7800"
+      orange: "#FF7800",
+      darkOrange: "#e97711"
     },
     fontFamily: {
       heading: "'Merienda One', cursive",

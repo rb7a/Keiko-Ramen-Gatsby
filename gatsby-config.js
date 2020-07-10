@@ -3,6 +3,9 @@ module.exports = {
     title: `Keiko Ramen`,
     description: `A Japanese restaurant where you can get delicious ramen!`,
     author: `@brittneypostma`,
+    image: `https://raw.githubusercontent.com/brittneypostma/final-project-keiko/master/src/images/logo.png?token=AK6DRQQMDWFKMGRUXYYED3K7A7AUY`,
+    siteUrl: `https://keiko-ramen.netlify.app/`
+
   },
   plugins: [
     {

@@ -7,7 +7,8 @@ const NumberOfItems = () => {
   return (
     <div className="flex justify-center">
       <p className={pStyles}>&#45;</p>
-      <input className={numStyles} type="number" value="1" min="1" max="10" />
+      <label htmlFor='number'>
+        <input className={numStyles} type="number" id="number" value="1" min="1" max="10" /></label>
       <p className={pStyles}>&#43;</p>
     </div>
   )

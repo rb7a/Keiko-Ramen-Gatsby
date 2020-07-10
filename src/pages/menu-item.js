@@ -6,7 +6,7 @@ import Carousel from '../components/sections/carousel'
 const MenuItemPage = () => {
   return (
     <Layout>
-      <SEO title="menu-item" />
+      <SEO title="Menu Item | Keiko Ramen" />
       <div className="relative bg-clear-top mb-32">
         <Carousel />
       </div>

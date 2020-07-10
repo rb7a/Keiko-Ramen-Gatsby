@@ -6,7 +6,7 @@ import CartItem from '../components/pieces/cart-item'
 const CartPage = () => {
   return (
     <Layout>
-      <SEO title="Cart" />
+      <SEO title="Cart | Keiko Ramen" />
       <div className="pb-24 p-5">
         <div className="relative bg-clear-top mb-32">
           <div>

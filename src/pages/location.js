@@ -19,7 +19,7 @@ const LocationPage = () => {
 `)
   return (
     <Layout>
-      <SEO title="Location" />
+      <SEO title="Location | Keiko Ramen" />
       <div className="relative bg-clear-top">
         <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="object-cover lg:max-h-screen" />
         <h1 className='text-white text-center bg-red'>Location</h1>

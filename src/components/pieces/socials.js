@@ -7,6 +7,7 @@ const Socials = () => {
       <div className="flex justify-evenly my-5">
         <a
           href="https://www.facebook.com/"
+          aria-label="facebook"
           className={socials}
           target="_blank"
           rel="noopener noreferrer"
@@ -19,6 +20,7 @@ const Socials = () => {
 
         <a
           href="https://twitter.com/"
+          aria-label="twitter"
           className={socials}
           target="_blank"
           rel="noopener noreferrer"
@@ -31,6 +33,7 @@ const Socials = () => {
         </a>
         <a
           href="https://www.instagram.com/"
+          aria-label="instagram"
           className={socials}
           target="_blank"
           rel="noopener noreferrer"

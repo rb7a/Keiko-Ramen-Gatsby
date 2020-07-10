@@ -7,7 +7,7 @@ import MenuCard from '../components/pieces/menu-card'
 const MenuPage = () => {
   return (
     <Layout>
-      <SEO title="Menu" />
+      <SEO title="Menu | Keiko Ramen" />
       <div className="mb-48">
         <div className="relative bg-clear-top">
           <h1 className="text-center">Menu</h1>

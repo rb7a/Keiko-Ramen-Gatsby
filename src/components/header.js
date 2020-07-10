@@ -38,6 +38,7 @@ const Header = ({ sticky }) => {
         <div className="w-full flex justify-end items-center">
           <button
             className={isTop ? mobileNavBtn : navBtnScroll}
+            aria-label="menu"
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
             <div>

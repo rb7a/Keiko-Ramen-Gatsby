@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql, withPrefix } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
+            siteUrl
           }
         }
       }
@@ -27,17 +29,13 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  const metaImage =
-    typeof window !== `undefined` &&
-    `${window.location.origin}${withPrefix(`/images/logo.png`)}`
-
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
@@ -49,15 +47,19 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: metaImage,
+          content: site.siteMetadata.image,
         },
         {
           property: `og:image:width`,
-          content: `1200`,
+          content: `100`,
+        },
+        {
+          property: `og:image:height`,
+          content: `100`,
         },
         {
           property: `og:url`,
-          content: `https://keiko-ramen.netlify.app/`
+          content: site.siteMetadata.siteUrl
         },
         {
           property: `og:description`,
@@ -77,7 +79,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: metaImage,
+          content: site.siteMetadata.image,
         },
         {
           property: `twitter:image:alt`,
@@ -107,6 +109,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 }
 
 export default SEO

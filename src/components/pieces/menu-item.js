@@ -18,7 +18,7 @@ const MenuItem = () => {
 
       <Link to='/cart' className={cartLink}>
         <img src={cart} alt="shopping cart" />
-        <p className="text-white font-body text-sm whitespace-no-wrap">ADD TO CART</p>
+        <p className="text-white text-sm text-heading whitespace-no-wrap">ADD TO CART</p>
       </Link>
     </div>
   )

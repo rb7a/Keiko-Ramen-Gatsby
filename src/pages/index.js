@@ -23,7 +23,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Keiko Ramen" />
+      <SEO title="Keiko Ramen | Noodles & Stuff" />
       <section className="relative top-125 flex justify-center">
         <Img fluid={data.bgImg.childImageSharp.fluid} alt="bowl of ramen with chopsticks" className="bg" />
         <div className="w-full absolute center bottom-0 text-center text-white">
