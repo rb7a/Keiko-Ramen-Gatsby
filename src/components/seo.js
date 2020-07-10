@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image: metaImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,6 +26,10 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
+
+  const image = metaImage && metaImage.src
+    ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+    : null
 
   const metaDescription = description || site.siteMetadata.description
 
@@ -46,18 +50,6 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
-          property: `og:image`,
-          content: site.siteMetadata.image,
-        },
-        {
-          property: `og:image:width`,
-          content: `100`,
-        },
-        {
-          property: `og:image:height`,
-          content: `100`,
-        },
-        {
           property: `og:url`,
           content: site.siteMetadata.siteUrl
         },
@@ -70,20 +62,8 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
-        },
-        {
-          property: `twitter:image`,
-          content: site.siteMetadata.image,
-        },
-        {
-          property: `twitter:image:alt`,
-          content: `Keiko Ramen Noodles & Stuff`,
         },
         {
           name: `twitter:title`,
@@ -93,7 +73,37 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta).concat(
+        metaImage
+          ? [
+            {
+              property: "og:image",
+              content: image,
+            },
+            {
+              property: "og:image:width",
+              content: metaImage.width,
+            },
+            {
+              property: "og:image:height",
+              content: metaImage.height,
+            },
+            {
+              property: `twitter:image:alt`,
+              content: `Keiko Ramen Noodles & Stuff`,
+            },
+            {
+              name: "twitter:card",
+              content: "summary_large_image",
+            },
+          ]
+          : [
+            {
+              name: "twitter:card",
+              content: "summary",
+            },
+          ]
+      )}
     />
   )
 }

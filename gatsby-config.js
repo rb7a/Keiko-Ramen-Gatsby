@@ -3,7 +3,7 @@ module.exports = {
     title: `Keiko Ramen`,
     description: `A Japanese restaurant where you can get delicious ramen!`,
     author: `@brittneypostma`,
-    image: `https://lh3.googleusercontent.com/g4MbONBeY1k3xC7dB3XoyhYoDue0pRtXHRGU3buHSNUXyDi0xgBLSerLCs3jHPtmZNrNykAQ_b7GbEyQSkNjUzsWKH9Td4wlx2GyQc34gqBiwazXDFarHFiI7k6pwg980VF_TfeVYDJyUeVUwGhYSyKRo9zIgF5wx9oJE0ipRNzNB8k23HaAFPFlnYQFGpqgDtUyKD5uSpDLGVoCb7Y67_sf4jEOnopDlyzUn002XnqeDKI9bcFcKsrY0A25A0EazGoTz6_e0IDG-5gbEFSfjajje0wXjzNQql7XamIDLRVBhfCzunpOO2ZgtsnYCLjEBjl2GjqiE3Pqv2rMB75O-F7ulL-ORmVoRmpnWIDiOIwA5lVvFLxQq3qoQ3gu1jej7t58wkwHdA_rdmmDaRfKBcII1Izd_qEHA6W2uNAa5szg0TaS9562mjVLkZfmtb4vbNLHyOL85GOg4lXzyh2CYFGEw8SluSMdMKJgIEmb378X0TgaNYm89JeouyM6A5eIa-J0TKBXjKP4qYR43HSEP3OrKkWU1Qe33JmXZTU0BhMZy7XyMUIeeojSN6Klzq4XNGbBW__4wXovVgiQ1QzyQE_iSZhmITsEcwbS5vmH4UEx1ZgAg-avZmihTbnODlwsTaBanChlyVL_rZXq37Cv6NFqmGiF3tT-f4wkQGYRwznrNHjoQqd3K77wDnKUew=s100-no?authuser=0`,
+    image: `images/logo.png`,
     siteUrl: `https://keiko-ramen.netlify.app/`
 
   },
