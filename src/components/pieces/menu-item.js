@@ -8,8 +8,8 @@ const cartLink = `rounded-sm bg-orange self-stretch flex flex-col items-center j
 const MenuItem = ({ name, desc, price }) => {
   return (
     <div className={itemWrapper}>
-      <div className="w-full grid justify-center items-center md:flex">
-        <h4 className="text-2xl w-1/2">{name}</h4>
+      <div className="w-full px-2  py-5 grid justify-center items-center md:flex">
+        <h4 className="text-2xl w-9/12">{name}</h4>
         <p className="md:mx-5">
           {desc}
         </p>
