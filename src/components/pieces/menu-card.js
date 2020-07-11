@@ -1,12 +1,11 @@
 import React from 'react'
-import beef from '../../images/card-images/beef.png'
 
-const MenuCard = () => {
+const MenuCard = ({ name, price, image }) => {
   return (
-    <div className="card-hover overflow-hidden bg-white hover:bg-orange hover:text-white shadow-xl transition-all ease-linear duration-150 rounded-sm text-center grid justify-center">
-      <h4 className="text-red">$12.00</h4>
-      <h3>Spicy Beef Ramen</h3>
-      <img src={beef} alt="spicy beef ramen" className="bezier" />
+    <div className="relative h-300 card-hover overflow-hidden bg-white hover:bg-orange hover:text-white shadow-xl transition-all ease-linear duration-150 rounded-sm text-center grid justify-center content-start">
+      <h4 className="text-red">${price}</h4>
+      <h3>{name}</h3>
+      <img src={require(`../../images/card-images/${image}.png`)} alt={name} className="bezier absolute bottom-0" />
     </div>
   )
 }

@@ -29,6 +29,7 @@ module.exports = {
         100: "100px",
         125: "125px",
         200: "58rem",
+        300: "300px",
         500: "500px",
       },
       opacity: {

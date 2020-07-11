@@ -18,7 +18,7 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex xl:w-1/2 justify-center">
+        <div className="hidden lg:flex xl:w-1/2 justify-end">
           <img src={beef} alt="Spicy Beef Ramen" className="h-full object-cover object-center" />
         </div>
       </div>
