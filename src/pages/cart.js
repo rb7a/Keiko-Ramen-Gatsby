@@ -1,11 +1,10 @@
 import React from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CartItem from '../components/pieces/cart-item'
 
 const CartPage = () => {
   return (
-    <Layout>
+    <div>
       <SEO title="Cart | Keiko Ramen" />
       <div className="pb-24 p-5">
         <div className="relative bg-clear-top mb-32">
@@ -57,7 +56,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 
