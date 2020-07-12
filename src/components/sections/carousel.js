@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import items from '../../data/menu-items.json'
 import CarouselCard from '../pieces/carousel-card'
 
@@ -6,6 +7,28 @@ const Carousel = () => {
   const [slide, setSlide] = useState(0)
   const previousImage = () => setSlide(slide - 1)
   const nextImage = () => setSlide(slide + 1)
+
+  const { allFile } = useStaticQuery(graphql`
+    query {
+        allFile(
+          sort: { fields: name, order: DESC }
+          filter: { relativeDirectory: { eq: "full-images" } }
+        ) {
+          edges {
+            node {
+              id
+              name
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+`)
+  const { node } = allFile.edges[slide]
   return (
     <div className="py-12 xl:mx-48">
       <div className="rounded-sm p-10 flex justify-between gap-5 shadow-xl">
@@ -20,7 +43,12 @@ const Carousel = () => {
         {items.map((item, key) => {
           if (key === slide) {
             return (
-              <CarouselCard key={key} name={item.name} price={item.price} longDesc={item.descriptionLong} fullImg={require(`../../images/full-images/${item.image}-ramen.jpg`)} />
+              <CarouselCard
+                key={key}
+                name={item.name}
+                price={item.price}
+                longDesc={item.descriptionLong}
+                fullImg={node.childImageSharp.fluid} />
             )
           }
         })}

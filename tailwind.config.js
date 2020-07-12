@@ -25,6 +25,9 @@ module.exports = {
       fontSize: {
         80: '8rem'
       },
+      gridTemplateColumns: {
+        'carousel': '1fr 1fr',
+      },
       height: {
         100: "100px",
         125: "125px",

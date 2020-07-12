@@ -1,13 +1,13 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import NumberOfItems from '../pieces/number-of-items'
 import AddToCart from '../pieces/add-to-cart'
 
 const CarouselCard = ({ name, longDesc, price, fullImg }) => {
-
   return (
-    <div className='grid lg:grid-cols-2 gap-5 justify-between'>
-      <div className="w-full">
-        <h2>{name}</h2>
+    <div className='grid lg:grid-cols-carousel gap-5 justify-between'>
+      <div className='w-full'>
+        <h2 className='whitespace-no-wrap'>{name}</h2>
         <p>{longDesc}</p>
         <h2 className="text-red">{price}</h2>
         <div className="flex items-center">
@@ -18,7 +18,7 @@ const CarouselCard = ({ name, longDesc, price, fullImg }) => {
         </div>
       </div>
       <div className="hidden lg:flex justify-end">
-        <img src={fullImg} alt={name} className="object-cover object-center w-full mb-2" />
+        <Img fluid={fullImg} alt={name} className="object-cover object-center w-full mb-2" />
       </div>
     </div >
   )
