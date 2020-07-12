@@ -30,14 +30,14 @@ const Carousel = () => {
 `)
   const { node } = allFile.edges[slide]
   return (
-    <div className="py-12 xl:mx-48">
-      <div className="rounded-sm p-10 flex justify-between gap-5 shadow-xl">
+    <div className="xl:mx-48">
+      <div className="rounded-sm py-10 flex justify-between gap-5 shadow-xl">
         {slide !== 0 ?
-          <div className='text-6xl text-red mr-5 flex items-center cursor-pointer outline-none' onClick={previousImage} onKeyPress={previousImage} role='button' tabIndex={0}>
+          <div className='text-3xl sm:text-6xl text-red pl-5 flex items-center cursor-pointer outline-none' onClick={previousImage} onKeyPress={previousImage} role='button' tabIndex={0}>
             <p aria-hidden='true'>&lt;</p>
           </div>
           :
-          <div className='text-6xl text-lightGray mr-5 flex items-center'>
+          <div className='text-3xl sm:text-6xl text-lightGray pl-5 flex items-center'>
             <p aria-hidden='true'>&lt;</p>
           </div>}
         {items.map((item, key) => {
@@ -53,11 +53,11 @@ const Carousel = () => {
           }
         })}
         {slide !== items.length - 1 ?
-          <div className='text-6xl text-red mr-5 flex items-center cursor-pointer outline-none' onClick={nextImage} onKeyPress={nextImage} role='button' tabIndex={0}>
+          <div className='text-3xl sm:text-6xl text-red pr-5  flex items-center cursor-pointer outline-none' onClick={nextImage} onKeyPress={nextImage} role='button' tabIndex={0}>
             <p aria-hidden='true'>&gt;</p>
           </div>
           :
-          <div className='text-6xl text-lightGray mr-5 flex items-center'>
+          <div className='text-3xl sm:text-6xl text-lightGray pr-5 flex items-center'>
             <p aria-hidden='true'>&gt;</p>
           </div>}
       </div>
