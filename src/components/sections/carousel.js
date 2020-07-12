@@ -13,7 +13,10 @@ const Carousel = () => {
           <div className='text-6xl text-red mr-5 flex items-center cursor-pointer outline-none' onClick={previousImage} onKeyPress={previousImage} role='button' tabIndex={0}>
             <p aria-hidden='true'>&lt;</p>
           </div>
-          : ''}
+          :
+          <div className='text-6xl text-lightGray mr-5 flex items-center'>
+            <p aria-hidden='true'>&lt;</p>
+          </div>}
         {items.map((item, key) => {
           if (key === slide) {
             return (
@@ -25,12 +28,11 @@ const Carousel = () => {
           <div className='text-6xl text-red mr-5 flex items-center cursor-pointer outline-none' onClick={nextImage} onKeyPress={nextImage} role='button' tabIndex={0}>
             <p aria-hidden='true'>&gt;</p>
           </div>
-          : ''}
+          :
+          <div className='text-6xl text-lightGray mr-5 flex items-center'>
+            <p aria-hidden='true'>&gt;</p>
+          </div>}
       </div>
-      {/* <div className='flex justify-between w-full'>
-        <button onClick={() => handlePrevious()} className='w-32'>Previous</button>
-        <button onClick={() => handleNext()} className='w-32'>Next</button>
-      </div> */}
     </div>
   )
 }

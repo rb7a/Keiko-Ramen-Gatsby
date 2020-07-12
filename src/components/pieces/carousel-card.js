@@ -2,7 +2,7 @@ import React from 'react'
 import NumberOfItems from '../pieces/number-of-items'
 import AddToCart from '../pieces/add-to-cart'
 
-const CarouselCard = ({ name, longDesc, price, fullImg, node }) => {
+const CarouselCard = ({ name, longDesc, price, fullImg }) => {
 
   return (
     <div className='grid lg:grid-cols-2 gap-5 justify-between'>
@@ -18,7 +18,7 @@ const CarouselCard = ({ name, longDesc, price, fullImg, node }) => {
         </div>
       </div>
       <div className="hidden lg:flex justify-end">
-        <img src={fullImg} alt={name} className="object-cover w-full h-500 mb-2" />
+        <img src={fullImg} alt={name} className="object-cover object-center w-full mb-2" />
       </div>
     </div >
   )
