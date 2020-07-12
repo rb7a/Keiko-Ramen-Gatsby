@@ -8,7 +8,7 @@ const CarouselCard = ({ name, longDesc, price, fullImg }) => {
     <div className='grid lg:grid-cols-carousel gap-5 justify-between'>
       <div>
         <h2 className='text-2xl sm:text-5xl whitespace-no-wrap'>{name}</h2>
-        <p className="text-xs sm:text-sm">{longDesc}</p>
+        <p className="text-xs sm:text-sm xl:text-lg">{longDesc}</p>
         <h2 className="text-red">{price}</h2>
         <div className="grid md:flex justify-start md:items-center">
           <NumberOfItems />
@@ -17,7 +17,7 @@ const CarouselCard = ({ name, longDesc, price, fullImg }) => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:flex justify-end">
+      <div className="hidden lg:flex justify-end items-stretch">
         <Img fluid={fullImg} alt={name} className="object-cover object-center w-full mb-2" />
       </div>
     </div >
