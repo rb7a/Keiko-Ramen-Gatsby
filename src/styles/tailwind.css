@@ -139,6 +139,7 @@ header nav li a {
 .gtc {
   grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
 }
+
 .icon:hover > path {
   fill: #ffffff;
 }
