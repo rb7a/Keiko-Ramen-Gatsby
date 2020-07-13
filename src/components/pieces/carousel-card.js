@@ -5,8 +5,8 @@ import AddToCart from '../pieces/add-to-cart'
 
 const CarouselCard = ({ name, longDesc, price, fullImg }) => {
   return (
-    <div className='flex items-stretch xxl:items-center justify-between'>
-      <div className='flex-1'>
+    <div className='grid grid-cols-carousel items-stretch xxl:items-center justify-between'>
+      <div>
         <h2 className='text-2xl sm:text-5xl whitespace-no-wrap'>{name}</h2>
         <p className="text-xs sm:text-sm xl:text-lg">{longDesc}</p>
         <h2 className="text-red">{price}</h2>
@@ -17,7 +17,7 @@ const CarouselCard = ({ name, longDesc, price, fullImg }) => {
           </div>
         </div>
       </div>
-      <div className="hidden flex-1 lg:flex ml-5 xxl:max-h-525">
+      <div className="hidden lg:flex ml-5 xxl:max-h-525">
         <Img fluid={fullImg} alt={name} className="object-cover w-full" />
       </div>
     </div >
