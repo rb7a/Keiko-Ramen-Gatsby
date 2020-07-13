@@ -50,7 +50,7 @@ const Carousel = () => {
                 longDesc={item.descriptionLong}
                 fullImg={node.childImageSharp.fluid} />
             )
-          }
+          } else return null
         })}
         {slide !== items.length - 1 ?
           <div className='text-3xl sm:text-6xl text-red px-5  flex items-center cursor-pointer outline-none' onClick={nextImage} onKeyPress={nextImage} role='button' tabIndex={0}>
