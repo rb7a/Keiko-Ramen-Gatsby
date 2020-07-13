@@ -25,20 +25,21 @@ module.exports = {
       fontSize: {
         80: '8rem'
       },
-      gridTemplateColumns: {
-        'carousel': '1fr 1fr',
-      },
       height: {
         100: "100px",
         125: "125px",
         200: "58rem",
-        300: "300px",
+        300: "300px"
+      },
+      maxHeight: {
+        525: "525px"
       },
       opacity: {
         90: '0.9'
       },
       screens: {
-        lg: '930px'
+        lg: '930px',
+        xxl: '1700px'
       },
     },
   },
