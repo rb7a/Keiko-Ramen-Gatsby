@@ -105,19 +105,7 @@ header nav li a {
 .bg {
   filter: brightness(60%);
   width: 100vw;
-  height: 100vh; /*  - 125px */
-}
-
-.bg-clear-top {
-  top: 125px;
-}
-
-.bg-clear {
-  top: 600px;
-}
-
-.bg-transparent {
-  background: transparent;
+  height: 100vh;
 }
 
 .card-hover:hover > img {
@@ -129,6 +117,11 @@ header nav li a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.clear-header {
+  position: relative;
+  top: 125px;
 }
 
 .email {
@@ -148,22 +141,14 @@ header nav li a {
   fill: #ff7800;
 }
 
-.mb-clear {
-  margin-top: 175px;
-}
-
-.mb-600 {
-  margin-bottom: 600px;
-}
-
-.menu {
+.mobile-menu {
   background: rgba(100, 10, 19, 0.8);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(40px);
 }
 
 @media only screen and (min-width: 930px) {
-  .menu {
+  .mobile-menu {
     background: transparent;
     box-shadow: none;
     backdrop-filter: blur(0);
@@ -172,18 +157,6 @@ header nav li a {
 
 .text-shadow {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.top-25 {
-  top: 25%;
-}
-
-.top-125 {
-  top: 125px;
-}
-
-.top-200 {
-  top: 200px;
 }
 
 /*! Input Number - no buttons */

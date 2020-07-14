@@ -9,7 +9,8 @@ module.exports = {
       red: "#A50022",
       darkRed: "#640A13",
       orange: "#FF7800",
-      darkOrange: "#e97711"
+      darkOrange: "#e97711",
+      transparent: "transparent"
     },
     fontFamily: {
       heading: "'Merienda One', cursive",
@@ -33,6 +34,11 @@ module.exports = {
         125: "125px",
         200: "58rem",
         300: "300px"
+      },
+      inset: {
+        25: "25%",
+        125: "125px",
+        200: "200px"
       },
       maxHeight: {
         525: "525px"

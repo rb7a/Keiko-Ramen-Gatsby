@@ -7,7 +7,7 @@ const CartPage = () => {
     <div>
       <SEO title="Cart | Keiko Ramen" />
       <div className="pb-24 p-5">
-        <div className="relative bg-clear-top mb-32">
+        <div className="relative clear-header mb-32">
           <div>
             <h2 className="text-center md:text-left lg:ml-5">Your Order</h2>
           </div>

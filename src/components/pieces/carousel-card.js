@@ -5,7 +5,7 @@ import AddToCart from '../pieces/add-to-cart'
 
 const CarouselCard = ({ name, longDesc, price, fullImg }) => {
   return (
-    <div className='grid grid-cols-carousel items-stretch xxl:items-center justify-between'>
+    <div className='grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between'>
       <div>
         <h2 className='text-2xl sm:text-5xl whitespace-no-wrap'>{name}</h2>
         <p className="text-xs sm:text-sm xl:text-lg">{longDesc}</p>
