@@ -1,13 +1,13 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import NumberOfItems from '../pieces/number-of-items'
-import AddToCart from '../pieces/add-to-cart'
+import React from "react"
+import Img from "gatsby-image"
+import NumberOfItems from "../cart/number-of-items"
+import AddToCart from "../cart/add-to-cart"
 
-const CarouselCard = ({ name, longDesc, price, fullImg }) => {
+const ItemDetail = ({ name, longDesc, price, fullImg }) => {
   return (
-    <div className='grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between'>
+    <div className="grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between">
       <div>
-        <h2 className='text-2xl sm:text-5xl whitespace-no-wrap'>{name}</h2>
+        <h2 className="text-2xl sm:text-5xl whitespace-no-wrap">{name}</h2>
         <p className="text-xs sm:text-sm xl:text-lg">{longDesc}</p>
         <h2 className="text-red">{price}</h2>
         <div className="grid md:flex justify-start md:items-center">
@@ -20,8 +20,8 @@ const CarouselCard = ({ name, longDesc, price, fullImg }) => {
       <div className="hidden lg:flex ml-5 xxl:max-h-525">
         <Img fluid={fullImg} alt={name} className="object-cover w-full" />
       </div>
-    </div >
+    </div>
   )
 }
 
-export default CarouselCard
+export default ItemDetail

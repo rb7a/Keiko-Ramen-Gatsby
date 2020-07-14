@@ -1,6 +1,6 @@
-import React from 'react'
-import SEO from '../components/seo'
-import CartItem from '../components/pieces/cart-item'
+import React from "react"
+import SEO from "../components/seo"
+import CartItem from "../components/cart/cart-item"
 
 const CartPage = () => {
   return (
@@ -11,9 +11,8 @@ const CartPage = () => {
           <div>
             <h2 className="text-center md:text-left lg:ml-5">Your Order</h2>
           </div>
-          <div className='grid gap-5 lg:flex lg:ml-5'>
-
-            <div className='grid gap-5'>
+          <div className="grid gap-5 lg:flex lg:ml-5">
+            <div className="grid gap-5">
               <CartItem />
               <CartItem />
               <CartItem />
@@ -21,9 +20,7 @@ const CartPage = () => {
             </div>
 
             <div className="bg-red shadow-lg px-5 grid justify-center p-5 gap-5 text-white lg:w-8/12 xl:max-w-sm lg:ml-5">
-
-
-              <div className='grid justify-center'>
+              <div className="grid justify-center">
                 <h3 className="text-2xl text-center">Order Details</h3>
                 <hr />
                 <div className="flex justify-between">
@@ -34,7 +31,7 @@ const CartPage = () => {
                 <hr />
               </div>
 
-              <div className='grid gap-2 items-end content-end  tracking-widest'>
+              <div className="grid gap-2 items-end content-end  tracking-widest">
                 <div className="grid gap-2 items-center">
                   <p className="text-lg font-bold flex justify-between">
                     <span>Subtotal</span>
@@ -46,12 +43,13 @@ const CartPage = () => {
                   </p>
                   <p className="text-lg font-bold flex justify-between">
                     <span>Total</span>
-                    <span className='text-orange border-solid border-white border-2 p-1 mb-5'>$12.72</span>
+                    <span className="text-orange border-solid border-white border-2 p-1 mb-5">
+                      $12.72
+                    </span>
                   </p>
                 </div>
-                <button className='hover:btn-hover'>Checkout</button>
+                <button className="hover:btn-hover">Checkout</button>
               </div>
-
             </div>
           </div>
         </div>

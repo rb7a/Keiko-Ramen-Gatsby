@@ -1,8 +1,8 @@
-import React from 'react'
-import SEO from '../components/seo'
-import Carousel from '../components/sections/carousel'
-import MenuCard from '../components/pieces/menu-card'
-import items from '../data/menu-items.json'
+import React from "react"
+import SEO from "../components/seo"
+import Carousel from "../components/menu/carousel"
+import Card from "../components/menu/card"
+import items from "../data/menu-items.json"
 
 const OrderNowPage = () => {
   return (
@@ -14,7 +14,7 @@ const OrderNowPage = () => {
           <Carousel />
           <div className="grid gap-10 gtc justify-center mt-8 xl:mx-48">
             {items.map(item => (
-              <MenuCard name={item.name} price={item.price} image={item.image} />
+              <Card name={item.name} price={item.price} image={item.image} />
             ))}
           </div>
         </div>

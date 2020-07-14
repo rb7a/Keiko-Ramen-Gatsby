@@ -1,6 +1,6 @@
 import React from 'react'
-import Subscribe from './pieces/subscribe'
-import Socials from './pieces/socials'
+import Subscribe from '../subscribe'
+import Socials from '../socials'
 
 const Footer = () => {
   return (

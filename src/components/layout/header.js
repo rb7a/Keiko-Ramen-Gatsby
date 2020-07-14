@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from 'gatsby'
-import logo from "../images/logo.png"
-import cart from "../images/cart.png"
+import logo from "../../images/logo.png"
+import cart from "../../images/cart.png"
 
 const headerStyles = `fixed top-0 w-full h-125 z-20 bg-red`
 const stickyHeader = `fixed top-0 w-full h-16 z-20 bg-darkRed bg-opacity-90 shadow-lg`
