@@ -25,7 +25,7 @@ const LocationPage = () => {
           alt="bowl of ramen with chopsticks"
           className="max-h-525"
         />
-        <h1 className="text-white text-center bg-red">Location</h1>
+        <h1 className="text-white text-center bg-red py-10">Location</h1>
         <Location />
       </div>
     </div>

@@ -1,16 +1,14 @@
 import React from "react"
 import SEO from "../components/seo"
 import MenuItems from "../components/menu/menu-items"
-import SVGBottom from "../components/svg-bottom"
 
 const MenuPage = () => {
   return (
-    <div>
+    <div className="bg-red">
       <SEO title="Menu | Keiko Ramen" />
-      <div className="clear-header">
-        <h1 className="text-white text-center bg-red">Menu</h1>
+      <div className="clear-header pb-12 xl:mx-48">
+        <h1 className="text-white text-center bg-red pt-10">Menu</h1>
         <MenuItems />
-        <SVGBottom />
       </div>
     </div>
   )
