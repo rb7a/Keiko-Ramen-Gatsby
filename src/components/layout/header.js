@@ -79,7 +79,7 @@ const Header = () => {
           </nav>
           <Link to='/cart' className="relative">
             <img src={cart} alt="shopping cart" />
-            <p className={cartCount < 10 ? badgeStyles : lgBadgeStyles}>{cartCount}</p>
+            <p className={cartCount < 9 ? badgeStyles : lgBadgeStyles}>{cartCount}</p>
           </Link>
         </div>
       </div>

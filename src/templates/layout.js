@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     setUrl(window.location.origin)
   }, [])
+
   return (
     <CartProvider
       mode="client-only"
