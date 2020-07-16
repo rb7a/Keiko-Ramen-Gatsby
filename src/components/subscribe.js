@@ -75,7 +75,8 @@ const Subscribe = () => {
                 {isSubmitting && "Submitting..."}
               </button>
               <p
-                className={isSuccessful.status ? 'flex text-white text-xs' : 'hidden'}>{isSuccessful.status && `Thank you for subscribing ${email}!`}
+                className={isSuccessful.status ? 'flex text-white text-sm text-center mx-auto ml-2 tracking-widest' : 'hidden'}>{isSuccessful.status && `Thank you for subscribing!`}<br />
+                {isSuccessful.status && `${email}`}
               </p>
             </form>
 
