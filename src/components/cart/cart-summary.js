@@ -14,8 +14,8 @@ const CartSummary = ({ items }) => {
   return (
     <div>
       {Object.keys(items).length === 0 ?
-        (<div className="text-red grid gap-10 justify-center w-screen">
-          <h2 className="whitespace-no-wrap">Oh the sadness, you don't have any ramen in your cart!</h2>
+        (<div className="text-red grid gap-10 justify-center w-screen pr-10 xxl:pr-0">
+          <h2 className="text-center xxl:whitespace-no-wrap">Oh the sadness, you don't have any ramen in your cart!</h2>
           <Link to='/' className="mx-auto"><button className="font-body text-4xl whitespace-no-wrap hover:btn-hover border-orange border-2 hover:border-solid">Go get more ramen</button></Link>
         </div>) :
         (<div className="bg-red shadow-lg px-5 grid p-5 gap-5 text-white">

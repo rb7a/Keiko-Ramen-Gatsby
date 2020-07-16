@@ -15,7 +15,7 @@ const CartPage = () => {
           <div>
             <h2 className="text-center md:text-left lg:ml-5">Your Order</h2>
           </div>
-          <div className="grid justify-between md:flex">
+          <div className="grid justify-stretch md:flex md:justify-center">
             <div className="w-full grid gap-5 mb-5 md:mb-0 md:mr-5">
               {Object.keys(cartDetails).map((item, idx) => {
                 const cartItem = cartDetails[item]
