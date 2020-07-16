@@ -28,7 +28,7 @@ const MenuItems = () => {
     <div className="relative bg-red px-0 pb-32 pt-12 sm:px-10 xl:px-0 grid gap-1">
       {itemsQuery.allStripePrice.edges.map(({ node: price }) => {
         const item = {
-          item: price.id,
+          sku: price.id,
           name: price.product.name,
           price: price.unit_amount,
           currency: price.currency,

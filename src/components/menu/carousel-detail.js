@@ -2,10 +2,11 @@ import React from "react"
 import { Link } from 'gatsby'
 import Img from "gatsby-image"
 import { formatCurrencyString } from 'use-shopping-cart'
+import AddToCart from '../cart/add-to-cart'
 
-const ItemDetail = ({ item, slug, fullImg }) => {
+const CarouselDetail = ({ item, slug, fullImg }) => {
   return (
-    <Link to={slug} className="text-black grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between">
+    <div to={slug} className="text-black grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between">
       <div>
         <h2 className="text-2xl sm:text-5xl whitespace-no-wrap">{item.name}</h2>
         <p className="font-body text-xs sm:text-sm xl:text-lg">
@@ -17,12 +18,15 @@ const ItemDetail = ({ item, slug, fullImg }) => {
             currency: item.currency,
           })}
         </h2>
+        <div className="mt-2 md:mt-0 md:ml-5">
+          <AddToCart item={item} />
+        </div>
       </div>
       <div className="hidden lg:flex ml-5 xxl:h-450">
         <Img fluid={fullImg} alt={item.name} className="object-cover w-full" />
       </div>
-    </Link>
+    </div >
   )
 }
 
-export default ItemDetail
+export default CarouselDetail

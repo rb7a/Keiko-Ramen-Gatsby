@@ -1,17 +1,16 @@
 import React from 'react'
 import { formatCurrencyString } from 'use-shopping-cart'
 import AddToCart from '../cart/add-to-cart'
-import NumberOfItems from '../cart/number-of-items'
 
 const Item = ({ item }) => {
   const cartInfo = {
-    item: item.id,
+    sku: item.id,
     name: item.product.name,
     price: item.unit_amount,
     currency: item.currency
   }
   return (
-    <div className="grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between">
+    <div className="rounded-sm p-10 shadow-xl border-t-8 border-solid border-red grid lg:grid-cols-carousel items-stretch xxl:items-center justify-between">
       <div>
         <h2 className="text-2xl sm:text-5xl whitespace-no-wrap">{item.product.name}</h2>
         <p className="font-body text-xs sm:text-sm xl:text-lg">
@@ -23,11 +22,8 @@ const Item = ({ item }) => {
             currency: item.currency,
           })}
         </h2>
-        <div className="grid md:flex items-center">
-          <NumberOfItems />
-          <div className='mt-5 md:ml-5 md:mt-0'>
-            <AddToCart item={cartInfo} />
-          </div>
+        <div className='mt-5 md:ml-5 md:mt-0'>
+          <AddToCart item={cartInfo} />
         </div>
       </div>
       <div className="hidden lg:flex ml-5 xxl:h-450">

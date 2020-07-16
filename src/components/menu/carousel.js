@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import ItemDetail from "./carousel-detail"
+import CarouselDetail from "./carousel-detail"
 
 const Carousel = () => {
   const [slide, setSlide] = useState(0)
@@ -65,13 +65,13 @@ const Carousel = () => {
       {detailsQuery.allStripePrice.edges.map(({ node: price }, key) => {
         if (key === slide) {
           const item = {
-            item: price.id,
+            sku: price.id,
             name: price.product.name,
             price: price.unit_amount,
             currency: price.currency,
           }
           return (
-            <ItemDetail
+            <CarouselDetail
               key={price.id}
               item={item}
               slug={price.product.metadata.slug}
