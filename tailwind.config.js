@@ -33,11 +33,13 @@ module.exports = {
         100: "100px",
         125: "125px",
         200: "58rem",
-        300: "300px"
+        250: "250px",
+        450: "450px"
       },
       inset: {
         25: "25%",
         125: "125px",
+        150: "150px",
         200: "200px"
       },
       maxHeight: {
@@ -46,10 +48,13 @@ module.exports = {
       opacity: {
         90: '0.9'
       },
+      padding: {
+        "2px": "2px"
+      },
       screens: {
         lg: '930px',
         xxl: '1700px'
-      },
+      }
     },
   },
   variants: {

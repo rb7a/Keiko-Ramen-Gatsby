@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link } from 'gatsby'
+import { useShoppingCart } from 'use-shopping-cart'
 import logo from "../../images/logo.png"
 import cart from "../../images/cart.png"
 
@@ -10,12 +11,16 @@ const mobileNavBtn = `bg-transparent z-10 mt-2 relative text-white cursor-pointe
 const navBtnScroll = `py-0 bg-transparent z-10 mt-2 relative text-white cursor-pointer text-xl leading-none rounded bg-transparent  block lg:hidden outline-none focus:outline-none focus:shadow-none`
 const hamburgerMenu = `grid h-1 w-10 relative mb-2 bg-white rounded z-10`
 const menuStyles = `mobile-menu rounded-md border-solid border-black border-4 lg:border-none relative top-125 lg:top-0 mr-0 lg:mr-12 grid lg:flex items-center lg:bg-opacity-0 p-2 lg:p-0`
-const linksStyles = `border-b-0 border-solid border-orange hover:border-b-4 `
+const linksStyles = `text-white border-b-0 border-solid border-orange hover:border-b-4 `
 const badgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-1`
+const lgBadgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange text-xs border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-2px`
 
-const Header = ({ sticky }) => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
+const Header = () => {
+  const ref = useRef();
+  const [navOpen, setNavOpen] = useState(false)
   const [isTop, setIsTop] = useState(true)
+  useOnClickOutside(ref, () => setNavOpen(false))
+  const { cartCount } = useShoppingCart()
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
@@ -29,6 +34,7 @@ const Header = ({ sticky }) => {
     });
   }, [])
 
+
   return (
     <header className={isTop ? headerStyles : stickyHeader}>
       <div className={headerWrapper}>
@@ -39,7 +45,7 @@ const Header = ({ sticky }) => {
           <button
             className={isTop ? mobileNavBtn : navBtnScroll}
             aria-label="menu"
-            onClick={() => setNavbarOpen(!navbarOpen)}
+            onClick={() => setNavOpen(true)}
           >
             <div>
               <span className={hamburgerMenu}></span>
@@ -48,23 +54,24 @@ const Header = ({ sticky }) => {
             </div>
           </button>
           <nav
+            ref={ref}
             className={
               "absolute lg:flex flex-grow items-center" +
-              (navbarOpen ? "grid" : " hidden")
+              (navOpen ? "grid" : " hidden")
             }
           >
             <ul className={menuStyles}>
               <li>
-                <Link to='/' className={linksStyles}>HOME</Link>
+                <Link to='/' className={linksStyles} onClick={() => setNavOpen(false)}>HOME</Link>
               </li>
               <li>
-                <Link to='/menu' className={linksStyles}>MENU</Link>
+                <Link to='/menu' className={linksStyles} onClick={() => setNavOpen(false)}>MENU</Link>
               </li>
               <li>
-                <Link to='/location' className={linksStyles}>LOCATION</Link>
+                <Link to='/location' className={linksStyles} onClick={() => setNavOpen(false)}>LOCATION</Link>
               </li>
               <li>
-                <Link to='/order-now'>
+                <Link to='/order-now' onClick={() => setNavOpen(false)}>
                   <button className="ml-1 mr-2 hover:btn-hover">ORDER NOW</button>
                 </Link>
               </li>
@@ -72,7 +79,7 @@ const Header = ({ sticky }) => {
           </nav>
           <Link to='/cart' className="relative">
             <img src={cart} alt="shopping cart" />
-            <p className={badgeStyles}>0</p>
+            <p className={cartCount < 10 ? badgeStyles : lgBadgeStyles}>{cartCount}</p>
           </Link>
         </div>
       </div>
@@ -81,3 +88,21 @@ const Header = ({ sticky }) => {
 }
 
 export default Header
+
+function useOnClickOutside(ref, handler) {
+  useEffect(() => {
+    const listener = event => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      handler(event);
+    };
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
+    return () => {
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
+    };
+  }, [ref, handler]
+  )
+}
