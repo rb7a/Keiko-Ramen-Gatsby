@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Header from "../components/layout/header"
 import Footer from "../components/layout/footer"
 
@@ -9,12 +9,16 @@ import { CartProvider } from 'use-shopping-cart'
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY)
 
 const Layout = ({ children }) => {
+  const [url, setUrl] = useState()
+  useEffect(() => {
+    setUrl(window.location.origin)
+  }, [])
   return (
     <CartProvider
       mode="client-only"
       stripe={stripePromise}
-      successUrl={`${window.location.origin}/success/`}
-      cancelUrl={`${window.location.origin}/`}
+      successUrl={url ? `${url}/success/` : `loading`}
+      cancelUrl={url ? `${url}/` : `loading`}
       currency="USD"
       allowedCountries={['US', 'GB', 'CA']}
       billingAddressCollection={true}
