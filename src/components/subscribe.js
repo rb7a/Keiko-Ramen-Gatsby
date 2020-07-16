@@ -21,7 +21,7 @@ const Subscribe = () => {
         <div className="grid justify-center lg:absolute email">
           <div className="flex">
             <form
-              className="grid justify-center j-items-center gap-2 "
+              className="grid gap-2 "
               onSubmit={async e => {
                 e.preventDefault();
                 setIsSubmitting(true);
@@ -75,7 +75,7 @@ const Subscribe = () => {
                 {isSubmitting && "Submitting..."}
               </button>
               <p
-                className={isSuccessful.status ? 'flex text-white text-sm' : 'hidden'}>{isSuccessful.status && `Thank you for subscribing ${email}!`}
+                className={isSuccessful.status ? 'flex text-white text-xs' : 'hidden'}>{isSuccessful.status && `Thank you for subscribing ${email}!`}
               </p>
             </form>
 

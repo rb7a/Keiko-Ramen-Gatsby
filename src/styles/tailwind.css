@@ -124,7 +124,7 @@ header nav li a {
 }
 
 .email {
-  top: 25%;
+  top: 50px;
   right: 100px;
 }
 
@@ -144,10 +144,6 @@ header nav li a {
 
 .icon:hover > circle {
   fill: #ff7800;
-}
-
-.j-items-center {
-  justify-items: center;
 }
 
 .mobile-menu {
