@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import items from "../../data/menu-items.json"
 import ItemDetail from "./item-detail"
 
 const Carousel = () => {
@@ -8,8 +7,24 @@ const Carousel = () => {
   const previousImage = () => setSlide(slide - 1)
   const nextImage = () => setSlide(slide + 1)
 
-  const { allFile } = useStaticQuery(graphql`
-    query {
+  const detailsQuery = useStaticQuery(graphql`
+    query ItemDetailQuery {
+        allStripePrice {
+          edges {
+            node {
+              unit_amount
+              product {
+                images
+                name
+                metadata {
+                  slug
+                }
+              }
+              currency
+              id
+            }
+          }
+      }
       allFile(
         sort: { fields: name, order: DESC }
         filter: { relativeDirectory: { eq: "full-images" } }
@@ -28,7 +43,9 @@ const Carousel = () => {
       }
     }
   `)
-  const { node } = allFile.edges[slide]
+
+  const { node } = detailsQuery.allFile.edges[slide]
+
   return (
     <div className="rounded-sm py-10 flex justify-between shadow-xl border-t-8 border-solid border-red">
       {slide !== 0 ? (
@@ -46,20 +63,25 @@ const Carousel = () => {
             <p aria-hidden="true">&lt;</p>
           </div>
         )}
-      {items.map((item, key) => {
+      {detailsQuery.allStripePrice.edges.map(({ node: price }, key) => {
         if (key === slide) {
+          const item = {
+            item: price.id,
+            name: price.product.name,
+            price: price.unit_amount,
+            currency: price.currency,
+          }
           return (
             <ItemDetail
-              key={key}
-              name={item.name}
-              price={item.price}
-              longDesc={item.descriptionLong}
+              key={price.id}
+              item={item}
+              slug={price.product.metadata.slug}
               fullImg={node.childImageSharp.fluid}
             />
           )
         } else return null
       })}
-      {slide !== items.length - 1 ? (
+      {slide !== detailsQuery.allStripePrice.edges.length - 1 ? (
         <div
           className="text-3xl sm:text-6xl text-red px-5  flex items-center cursor-pointer outline-none"
           onClick={nextImage}

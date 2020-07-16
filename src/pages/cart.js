@@ -1,12 +1,39 @@
-import React from "react"
+import React, { useState } from "react"
+import { useShoppingCart } from 'use-shopping-cart'
 import SEO from "../components/seo"
-import CartItem from "../components/cart/cart-item"
+// import CartItem from "../components/cart/cart-item"
 
 const CartPage = () => {
+  const [loading, setLoading] = useState(false)
+  const {
+    formattedTotalPrice,
+    redirectToCheckout,
+    cartCount,
+    clearCart,
+  } = useShoppingCart()
   return (
-    <div>
+    <div className="relative clear-header mb-32">
       <SEO title="Cart | Keiko Ramen" />
-      <div className="pb-24 p-5">
+      < div >
+        {/* This is where we'll render our cart */}
+        <p> Number of Items: {cartCount}</p>
+        <p>Total: {formattedTotalPrice}</p>
+
+        {/* Redirects the user to Stripe */}
+        <button
+          disabled={loading}
+          onClick={() => {
+            setLoading(true)
+            redirectToCheckout()
+          }}
+        >
+          {loading ? 'Loading...' : 'Checkout'}
+        </button>
+        <button onClick={clearCart}>
+          Clear cart
+      </button>
+      </div >
+      {/* <div className="pb-24 p-5">
         <div className="relative clear-header mb-32">
           <div>
             <h2 className="text-center md:text-left lg:ml-5">Your Order</h2>
@@ -53,7 +80,7 @@ const CartPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

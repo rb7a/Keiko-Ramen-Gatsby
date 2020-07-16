@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from 'gatsby'
+import { useShoppingCart } from 'use-shopping-cart'
 import logo from "../../images/logo.png"
 import cart from "../../images/cart.png"
 
@@ -12,12 +13,14 @@ const hamburgerMenu = `grid h-1 w-10 relative mb-2 bg-white rounded z-10`
 const menuStyles = `mobile-menu rounded-md border-solid border-black border-4 lg:border-none relative top-125 lg:top-0 mr-0 lg:mr-12 grid lg:flex items-center lg:bg-opacity-0 p-2 lg:p-0`
 const linksStyles = `border-b-0 border-solid border-orange hover:border-b-4 `
 const badgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-1`
+const lgBadgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange text-xs border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-2px`
 
 const Header = () => {
   const ref = useRef();
   const [navOpen, setNavOpen] = useState(false)
   const [isTop, setIsTop] = useState(true)
   useOnClickOutside(ref, () => setNavOpen(false))
+  const { cartCount } = useShoppingCart()
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
@@ -76,7 +79,7 @@ const Header = () => {
           </nav>
           <Link to='/cart' className="relative">
             <img src={cart} alt="shopping cart" />
-            <p className={badgeStyles}>0</p>
+            <p className={cartCount < 10 ? badgeStyles : lgBadgeStyles}>{cartCount}</p>
           </Link>
         </div>
       </div>
