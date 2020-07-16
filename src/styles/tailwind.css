@@ -43,7 +43,6 @@ h4 {
 a {
   @apply font-heading;
   @apply no-underline;
-  @apply text-white;
   @apply text-lg;
   @apply transition-all;
   @apply ease-linear;

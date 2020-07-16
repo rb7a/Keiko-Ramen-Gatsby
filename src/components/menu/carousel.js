@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import ItemDetail from "./item-detail"
+import ItemDetail from "./carousel-detail"
 
 const Carousel = () => {
   const [slide, setSlide] = useState(0)

@@ -42,6 +42,9 @@ module.exports = {
         150: "150px",
         200: "200px"
       },
+      maxHeight: {
+        525: "525px"
+      },
       opacity: {
         90: '0.9'
       },

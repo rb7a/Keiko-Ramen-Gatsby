@@ -11,7 +11,7 @@ const mobileNavBtn = `bg-transparent z-10 mt-2 relative text-white cursor-pointe
 const navBtnScroll = `py-0 bg-transparent z-10 mt-2 relative text-white cursor-pointer text-xl leading-none rounded bg-transparent  block lg:hidden outline-none focus:outline-none focus:shadow-none`
 const hamburgerMenu = `grid h-1 w-10 relative mb-2 bg-white rounded z-10`
 const menuStyles = `mobile-menu rounded-md border-solid border-black border-4 lg:border-none relative top-125 lg:top-0 mr-0 lg:mr-12 grid lg:flex items-center lg:bg-opacity-0 p-2 lg:p-0`
-const linksStyles = `border-b-0 border-solid border-orange hover:border-b-4 `
+const linksStyles = `text-white border-b-0 border-solid border-orange hover:border-b-4 `
 const badgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-1`
 const lgBadgeStyles = `absolute -mt-12 -mr-2 right-0 bg-white text-orange text-xs border-red border-solid border-2 rounded-full h-6 w-6 leading-5 pl-2px`
 

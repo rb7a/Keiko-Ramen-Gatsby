@@ -1,25 +1,24 @@
 import React, { useState } from "react"
 import { useShoppingCart } from 'use-shopping-cart'
 import SEO from "../components/seo"
-// import CartItem from "../components/cart/cart-item"
+import CartItem from "../components/cart/cart-item"
 
 const CartPage = () => {
   const [loading, setLoading] = useState(false)
   const {
+    cartDetails,
     formattedTotalPrice,
     redirectToCheckout,
     cartCount,
     clearCart,
   } = useShoppingCart()
+  console.log(cartDetails)
   return (
     <div className="relative clear-header mb-32">
       <SEO title="Cart | Keiko Ramen" />
       < div >
-        {/* This is where we'll render our cart */}
         <p> Number of Items: {cartCount}</p>
         <p>Total: {formattedTotalPrice}</p>
-
-        {/* Redirects the user to Stripe */}
         <button
           disabled={loading}
           onClick={() => {
@@ -33,20 +32,21 @@ const CartPage = () => {
           Clear cart
       </button>
       </div >
-      {/* <div className="pb-24 p-5">
+      <div className="pb-24 p-5">
         <div className="relative clear-header mb-32">
           <div>
             <h2 className="text-center md:text-left lg:ml-5">Your Order</h2>
           </div>
           <div className="grid gap-5 lg:flex lg:ml-5">
             <div className="grid gap-5">
-              <CartItem />
-              <CartItem />
-              <CartItem />
-              <CartItem />
+              {/* {cartDetails.undefined.map((item, idx) => {
+                return (
+                  <CartItem item={item} key={idx} />
+                )
+              })} */}
             </div>
 
-            <div className="bg-red shadow-lg px-5 grid justify-center p-5 gap-5 text-white lg:w-8/12 xl:max-w-sm lg:ml-5">
+            <div className="bg-red shadow-lg px-5 grid justify-between p-5 gap-5 text-white">
               <div className="grid justify-center">
                 <h3 className="text-2xl text-center">Order Details</h3>
                 <hr />
@@ -71,7 +71,7 @@ const CartPage = () => {
                   <p className="text-lg font-bold flex justify-between">
                     <span>Total</span>
                     <span className="text-orange border-solid border-white border-2 p-1 mb-5">
-                      $12.72
+                      {formattedTotalPrice}
                     </span>
                   </p>
                 </div>
@@ -80,7 +80,7 @@ const CartPage = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
