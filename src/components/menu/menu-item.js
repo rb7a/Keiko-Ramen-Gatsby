@@ -16,18 +16,18 @@ const MenuItem = ({ item, desc, slug }) => {
 
   return (
     <div className={itemWrapper}>
-      <Link to={slug}>
-        <div className={textWrapper}>
-          <h4 className="text-2xl flex-1">{item.name}</h4>
-          <p className="font-body md:mx-5">{desc}</p>
-          <h4 className="text-2xl">
-            {formatCurrencyString({
-              value: parseInt(item.price),
-              currency: item.currency,
-            })}
-          </h4>
-        </div>
+
+      <Link to={slug} className={textWrapper}>
+        <h4 className="text-2xl whitespace-no-wrap md:whitespace-pre-wrap md:flex-grow w-3/12">{item.name}</h4>
+        <p className="font-body md:mx-5">{desc}</p>
+        <h4 className="text-2xl">
+          {formatCurrencyString({
+            value: parseInt(item.price),
+            currency: item.currency,
+          })}
+        </h4>
       </Link>
+
       <div
         className={cartLink}
         onClick={() => addItem(item)}

@@ -1,16 +1,14 @@
 import React from "react"
 import SEO from "../components/seo"
-import Carousel from "../components/menu/carousel"
-import Cards from "../components/menu/cards"
+import MenuItems from "../components/menu/menu-items"
 
 const OrderNowPage = () => {
   return (
-    <div>
+    <div className="bg-red">
       <SEO title="Order Now | Keiko Ramen" />
-      <div className="relative clear-header grid gap-10 mt-10 mb-48 xl:mx-48">
-        <h1 className="text-center">Order Now</h1>
-        <Carousel />
-        <Cards />
+      <div className="relative clear-header grid gap-10 mt-10 pb-12 xl:mx-48">
+        <h1 className="text-center text-white pt-10">Order Now</h1>
+        <MenuItems />
       </div>
     </div>
   )

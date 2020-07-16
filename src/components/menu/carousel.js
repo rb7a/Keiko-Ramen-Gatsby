@@ -12,16 +12,15 @@ const Carousel = () => {
         allStripePrice {
           edges {
             node {
+              id
+              currency
               unit_amount
               product {
-                images
                 name
                 metadata {
                   slug
                 }
               }
-              currency
-              id
             }
           }
       }
