@@ -61,12 +61,22 @@ module.exports = {
         display: `minimal-ui`,
         icons: [
           {
-            src: "/android-chrome-192x192.png",
-            sizes: "192x192",
+            src: "src/images/favicon-16x16.png",
+            sizes: "16x16",
             type: "image/png",
           },
           {
-            src: "/android-chrome-512x512.png",
+            src: "src/images/favicon-32x32.png",
+            sizes: "32x32",
+            type: "image/png",
+          },
+          {
+            src: "src/images/logo.png",
+            sizes: "100x100",
+            type: "image/png",
+          },
+          {
+            src: "src/images/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
