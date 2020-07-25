@@ -81,6 +81,7 @@ module.exports = {
             sizes: "512x512",
             type: "image/png",
           }, // This path is relative to the root of the site.
+        ]
       },
     },
     {
