@@ -59,6 +59,7 @@ module.exports = {
         background_color: `#A50022`,
         theme_color: `#A50022`,
         display: `minimal-ui`,
+        icon: `src/images/logo.png`,
         icons: [
           {
             src: "src/images/favicon-16x16.png",
@@ -68,11 +69,6 @@ module.exports = {
           {
             src: "src/images/favicon-32x32.png",
             sizes: "32x32",
-            type: "image/png",
-          },
-          {
-            src: "src/images/logo.png",
-            sizes: "100x100",
             type: "image/png",
           },
           {
